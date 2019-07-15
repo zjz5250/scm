@@ -1,7 +1,8 @@
 # Pytorch 多机多卡测试
+参考：[🔗](https://github.com/fusimeng/framework_benchmark)
 ## 一、准备数据和代码
 ### 1、下载
-我们已将数据和代码存储到我公司的FTP服务器上，单击[此处](http://123.151.118.124:13390/sitonholy/scm/pytorch-smsg.tar.gz)下载，并将其上传到服务器上。    
+我们已将数据和代码存储到我公司的FTP服务器上，单击[此处](http://123.151.118.124:13390/sitonholy/scm/pytorch-bm.tar.gz)下载，并将其上传到服务器上。    
 ### 2、上传数据
 依次单击`系统管理->文件管理->文档上传`将文件（主要，文件应该是解压后的）上传到服务器。   
 ![](../imgs/bm-01.png)    
