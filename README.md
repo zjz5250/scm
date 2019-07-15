@@ -26,7 +26,7 @@ SCM是基于Hadoop、K8s和Docker的集群调度系统，系统架构图如下�
 |框架|单机单卡|单机多卡|多机多卡|Horovod|
 |:-:|:-:|:-:|:-:|:-:|
 |Pytorch|[🔗](bm/pytorch-smsg.md)|[🔗](bm/pytorch-smmg.md)|[🔗](bm/pytorch-mmmg.md)|N/A|
-|TensorFlow|[🔗](bm/tensorflow-smsg.md)|[🔗](bm/tensorflow-smmg.md)|N/A|N/A|
+|TensorFlow|[🔗](bm/tensorflow-smsg.md)|[🔗](bm/tensorflow-smmg.md)|[🔗](bm/tensorflow-mmmg.md)|N/A|
 |MxNet|N/A|N/A|N/A|N/A|
 
 
