@@ -22,3 +22,71 @@
 * 单击`5`可以查看当前作业日志
 ![](../imgs/job-05.png)   
 
+## 第4节 使用TensorBoard动态监控
+[下载](http://123.151.118.124:13390/sitonholy/scm/tensorboard.tar.gz)代码,上传并解压，如图所示：    
+![](../imgs/submit-33.png)   
+```
+{
+  "jobName": "felix-tensorboard-44_16c60a49",
+  "image": "192.168.50.23:80/sitonholy/ai:16.04-9.0-3.5-pmt",
+  "authFile": "",
+  "dataDir": "",
+  "outputDir": "",
+  "codeDir": "",
+  "retryCount": 2,
+  "taskRoles": [
+    {
+      "name": "task1",
+      "taskNumber": 1,
+      "cpuNumber": 1,
+      "memoryMB": 8192,
+      "shmMB": 64,
+      "gpuNumber": 1,
+      "storageGB": 15,
+      "minFailedTaskCount": null,
+      "minSucceededTaskCount": 1,
+      "command": "cd /root/data/framework_benchmark/tensorboard && python demo.py",
+      "portList": []
+    },
+    {
+      "name": "look",
+      "taskNumber": 1,
+      "cpuNumber": 1,
+      "memoryMB": 1024,
+      "shmMB": 64,
+      "gpuNumber": 0,
+      "storageGB": 5,
+      "minFailedTaskCount": 1,
+      "minSucceededTaskCount": null,
+      "command": "tensorboard --logdir /root/data/framework_benchmark/tensorboard/runs --port $PAI_CONTAINER_HOST_tensorboard_PORT_LIST",
+      "portList": [
+        {
+          "label": "tensorboard",
+          "beginAt": 0,
+          "portNumber": 1
+        }
+      ]
+    }
+  ],
+  "jobEnvs": {},
+  "extras": {},
+  "gpuType": "P100",
+  "tmp": {
+    "vgInfo": {
+      "名称": "total",
+      "正在跑工作数目": "3",
+      "使用中內存/全部內存": "25600/190464",
+      "使用中硬盘/全部硬盘": "50/2720",
+      "使用中中央处理器/全部中中央处理器": "4/96",
+      "显示卡(使用中/全部)": {
+        "P100": "3/4",
+        "TITANX": "0/4"
+      }
+    }
+  }
+}
+```
+连接TensorBoard服务：   
+![](../imgs/submit-34.png)
+![](../imgs/submit-35.png)   
+![](../imgs/submit-36.png)   
